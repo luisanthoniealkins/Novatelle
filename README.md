@@ -8,7 +8,7 @@ An HTML lesson that presents itself: browser narration, animated SVG, bilingual 
 
 ## Try it
 
-Open the demo above or open `index.html` locally, then press **Play**. Use **EN/ID** to switch languages and **CC** to toggle subtitles. On phones, the gear button opens language, voice, and speed settings. Keep the `downloads/` folder beside the HTML if you want the local skill download link to work.
+Open the demo above or open `index.html` locally, then press **Play**. Use **EN/ID** to switch languages and **CC** to toggle subtitles. On phones, the gear button opens CC, language, voice, and speed settings. Keep the `downloads/` folder beside the HTML if you want the local skill download link to work.
 
 ## How it works
 
@@ -16,7 +16,7 @@ One standalone HTML file contains the lesson, animated SVG visuals, and playback
 
 Voices and pause/resume behavior depend on your browser and operating system. On Android, Resume repeats the current narration segment to avoid native speech-resume failures. Some voices need an internet connection. If narration is unavailable, the lesson continues with paced captions.
 
-The presentation is **43,037 bytes (43.0 KB)**, rounded to **43 KB** in the demo. This excludes browser and voice resources. Its comparison with a roughly **600 MB**, ten-minute Windows Snipping Tool recording is an illustrative observation, not an equivalent-content benchmark.
+The presentation is **43,254 bytes (43.3 KB)**, rounded to **43 KB** in the demo. This excludes browser and voice resources. Its comparison with a roughly **600 MB**, ten-minute Windows Snipping Tool recording is an illustrative observation, not an equivalent-content benchmark.
 
 ## Install the reusable skill
 

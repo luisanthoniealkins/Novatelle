@@ -131,7 +131,7 @@ header{padding-top:12px;padding-bottom:12px}
 </main>
 <footer class="transport" id="controls">
 <div class="subtitle-overlay" id="subtitleOverlay" hidden><p class="caption" aria-live="off"><span id="caption"></span></p></div>
-<div class="toolbar"><div class="group"><button id="play" class="primary"></button><span class="control-divider" aria-hidden="true"></span><button id="prev"></button><span id="page"></span><button id="next"></button><span class="control-divider" aria-hidden="true"></span><button id="captions" aria-pressed="true" aria-controls="subtitleOverlay">CC</button></div>
+<div class="toolbar"><div class="group"><button id="play" class="primary"></button><span class="control-divider" aria-hidden="true"></span><button id="prev"></button><span id="page"></span><button id="next"></button><span id="captionSlot" class="control-divider" aria-hidden="true"></span><button id="captions" aria-pressed="true" aria-controls="subtitleOverlay">CC</button></div>
 <button id="settingsToggle" aria-expanded="false" aria-controls="settingsPanel" hidden><span aria-hidden="true">&#9881;&#65038;</span></button><div class="label-group" id="settingsPanel" role="group"><button id="language"></button><label id="voiceLabel"><span id="voiceTitle"></span><select id="voice"></select></label><label><span id="speedTitle"></span><select id="speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label></div></div>
 </footer></div>
 <noscript><p>This lesson requires JavaScript. Pelajaran ini memerlukan JavaScript.</p></noscript>
@@ -431,7 +431,7 @@ function toggleShape(shape){const key=shape.dataset.shape;if(!(key in state.shap
 $('visual').addEventListener('click',e=>{const shape=e.target.closest('[data-shape]');if(shape)toggleShape(shape);});
 const compactSettings=matchMedia('(max-width:1000px)');
 function closeSettings(restoreFocus=false){$('settingsToggle').setAttribute('aria-expanded','false');$('settingsPanel').hidden=compactSettings.matches;if(restoreFocus)$('settingsToggle').focus();}
-function syncSettings(){const hadFocus=$('settingsPanel').contains(document.activeElement);$('settingsToggle').hidden=!compactSettings.matches;closeSettings(hadFocus&&compactSettings.matches);}
+function syncSettings(){const hadFocus=$('settingsPanel').contains(document.activeElement)||document.activeElement===$('captions');if(compactSettings.matches)$('settingsPanel').prepend($('captions'));else $('captionSlot').after($('captions'));$('captionSlot').hidden=compactSettings.matches;$('settingsToggle').hidden=!compactSettings.matches;closeSettings(hadFocus&&compactSettings.matches);}
 $('settingsToggle').onclick=()=>{const open=$('settingsToggle').getAttribute('aria-expanded')!=='true';$('settingsToggle').setAttribute('aria-expanded',String(open));$('settingsPanel').hidden=!open;if(open)$('language').focus();};
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&compactSettings.matches&&$('settingsToggle').getAttribute('aria-expanded')==='true'){e.preventDefault();closeSettings(true);}});
 document.addEventListener('pointerdown',e=>{if(!$('settingsPanel').contains(e.target)&&!$('settingsToggle').contains(e.target))closeSettings();});
