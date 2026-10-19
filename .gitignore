@@ -1,0 +1,12 @@
+/private/
+/scratch/
+/test-artifacts/
+/test-results/
+/playwright-report/
+/coverage/
+/tmp/
+node_modules/
+__pycache__/
+*.pyc
+*.log
+.DS_Store
