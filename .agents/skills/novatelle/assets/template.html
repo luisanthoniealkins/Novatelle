@@ -80,9 +80,9 @@ header{padding-top:12px;padding-bottom:12px}
 #settingsToggle[aria-expanded=true]{color:var(--cyan);border-color:var(--cyan)}
 @media(max-width:1000px){
 .toolbar{flex-wrap:nowrap;justify-content:space-between;gap:8px}.toolbar .group{width:auto;flex:none}
-#settingsPanel{position:absolute;right:max(8px,env(safe-area-inset-right));bottom:calc(100% + 8px);z-index:10;width:min(300px,calc(100vw - 16px));max-height:calc(100dvh - 85px);overflow:auto;padding:16px;display:flex;flex-direction:column;align-items:stretch;gap:14px;background:#111e32;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 40px #0008}
-#settingsPanel label{width:100%;max-width:none;flex:none;font-size:12px}#settingsPanel label>span{position:static;width:auto;height:auto;overflow:visible;clip-path:none}
-#settingsPanel select{max-width:none;padding:10px}#settingsPanel #language{align-self:flex-start}
+#settingsPanel{position:absolute;right:max(8px,env(safe-area-inset-right));bottom:calc(100% + 8px);z-index:10;width:min(300px,calc(100vw - 16px));max-height:calc(100dvh - 85px);overflow:auto;padding:16px;display:grid;grid-template-columns:auto 1fr;align-items:stretch;gap:14px;background:#111e32;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 40px #0008}
+#settingsPanel label{grid-column:1 / -1;width:100%;max-width:none;flex:none;font-size:12px}#settingsPanel label>span{position:static;width:auto;height:auto;overflow:visible;clip-path:none}
+#settingsPanel select{max-width:none;padding:10px}#settingsPanel #language{justify-self:start;align-self:start}
 }
 @media(max-width:380px){#play .play-word{display:none}#play{width:44px;padding:10px 4px}}
 /* Keep the transport height stable across responsive breakpoints. */

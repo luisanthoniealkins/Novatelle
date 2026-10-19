@@ -17,7 +17,7 @@
 <style>
 :root{color-scheme:dark;--bg:#080e1c;--panel:#101b2d;--ink:#edf4ff;--muted:#a2b2cb;--cyan:#67e8f9;--blue:#739cff;--line:#293952}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% 20%,#142844 0,transparent 55%),var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,select,a{touch-action:manipulation}button,select,.button{font:inherit;border:1px solid var(--line);border-radius:10px;background:#152239;color:var(--ink);padding:10px 15px;min-height:44px;cursor:pointer;text-decoration:none}button:hover,.button:hover{background:#203651;border-color:var(--cyan)}button:disabled{opacity:.4;cursor:default}button:focus-visible,select:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}a{color:var(--cyan)}.primary{background:var(--cyan);color:#07202b;border-color:var(--cyan);font-weight:750}.primary:hover{background:#a0f3ff;color:#07202b}.muted{color:var(--muted)}.small{font-size:12px}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--cyan);font-weight:700}
-#app{min-height:100svh;display:flex;flex-direction:column}header{width:min(1200px,100%);margin:auto;padding:24px 32px;display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{font-size:23px;font-weight:800;letter-spacing:-1px}.brand::before{content:'◈';color:var(--cyan);margin-right:9px}.tagline{font-size:12px;color:var(--muted)}main{width:min(1160px,100%);margin:auto;flex:1;padding:12px 32px 28px;display:flex;flex-direction:column;justify-content:center}#chapterNav{display:flex;gap:8px;margin-bottom:24px}#chapterNav button{flex:1;min-width:0;min-height:12px;height:12px;padding:0;border-radius:20px;background:#24344b}#chapterNav button[aria-current=true]{background:var(--cyan);box-shadow:0 0 20px #67e8f922}#chapterNav button.visited{background:#5878a0}.scene{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center;min-height:340px}h1{font-size:clamp(36px,4.6vw,64px);line-height:1.06;letter-spacing:-.055em;margin:16px 0 20px;font-weight:780;max-width:640px}.subtitle{font-size:18px;color:var(--muted);max-width:410px;margin-bottom:24px}.visual{min-height:300px;border:1px solid var(--line);border-radius:24px;padding:28px;background:linear-gradient(145deg,#13233cdd,#0b1528ee);box-shadow:0 20px 80px #0003;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}.visual::before{content:'';position:absolute;inset:0;background-image:radial-gradient(#4e6a8a33 1px,transparent 1px);background-size:22px 22px;pointer-events:none}.visual>*{position:relative}.code-icon{font:700 72px/1.4 ui-monospace,monospace;color:var(--cyan);text-align:center;letter-spacing:-8px}.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}.chip{padding:8px 11px;border:1px solid #38516b;border-radius:30px;font-size:12px;background:#102035}.reveal{animation:enter .6s both}.awaiting{visibility:hidden}.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center}.node{padding:12px;background:#20314b;border:1px solid #476282;border-radius:12px;font-size:13px;text-align:center}.arrow{color:var(--cyan)}.consolidated{margin:24px auto 0;padding:15px 22px;border:1px solid var(--cyan);border-radius:12px;color:var(--cyan);text-align:center}.diagram{width:100%;height:auto;max-height:200px;overflow:visible}.diagram text{fill:var(--ink);font:14px system-ui}.diagram .moving{animation:travel 2.8s ease-in-out infinite alternate}.patch{display:grid;grid-template-columns:1fr 1fr;gap:16px}.patch-box{padding:16px 10px;background:#091323;border:1px solid var(--line);border-radius:12px;text-align:center}.patch-box code{display:block;font-size:12px;margin-top:12px;color:var(--muted)}.swatch{width:65px;height:65px;margin:16px auto 0;border-radius:50%;background:#fb923c;box-shadow:0 0 35px #fb923c22}.swatch.after{background:var(--cyan);box-shadow:0 0 35px #67e8f933}.annotation{color:var(--muted);font-size:12px;margin-top:18px;line-height:1.55}.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.stat{font-size:clamp(27px,3.4vw,46px);font-weight:750;letter-spacing:-.05em}.stat-grid>div{border-left:2px solid #546882;padding-left:16px}.stat-grid>div:last-child{border-color:var(--cyan);color:var(--cyan)}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.big-mark{font-size:90px;color:var(--cyan);line-height:1.2;text-align:center}.transport{position:sticky;bottom:0;z-index:5;background:#0a1222f5;border-top:1px solid var(--line);backdrop-filter:blur(12px);padding:16px max(24px,calc((100vw - 1096px)/2));}.toolbar{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap}.group{display:flex;align-items:center;gap:8px}.label-group{display:flex;gap:12px;flex:1;justify-content:flex-end;align-items:end}label{display:flex;flex-direction:column;gap:4px;color:var(--muted);font-size:11px}select{font-size:13px;padding:10px;max-width:230px;width:100%}#voiceLabel{flex:1;max-width:230px;min-width:100px}#page{font-variant-numeric:tabular-nums;white-space:nowrap;font-size:13px;min-width:46px;text-align:center}#language{white-space:nowrap}[hidden]{display:none!important}body:not(.playing) .reveal,body:not(.playing) .moving{animation-play-state:paused}@keyframes enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@keyframes travel{from{transform:translateX(0)}to{transform:translateX(180px)}}
+#app{min-height:100svh;display:flex;flex-direction:column}header{width:min(1200px,100%);margin:auto;padding:24px 32px;display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{font-size:23px;font-weight:800;letter-spacing:-1px}.brand::before{content:'◈';color:var(--cyan);margin-right:9px}.tagline{font-size:12px;color:var(--muted)}main{width:min(1160px,100%);margin:auto;flex:1;padding:12px 32px 28px;display:flex;flex-direction:column;justify-content:center}#chapterNav{display:flex;gap:8px;margin-bottom:24px}#chapterNav button{flex:1;min-width:0;min-height:12px;height:12px;padding:0;border-radius:20px;background:#24344b}#chapterNav button[aria-current=true]{background:var(--cyan);box-shadow:0 0 20px #67e8f922}#chapterNav button.visited{background:#5878a0}.scene{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center;min-height:340px}h1{font-size:clamp(36px,4.6vw,64px);line-height:1.06;letter-spacing:-.055em;margin:16px 0 20px;font-weight:780;max-width:640px}.subtitle{font-size:18px;color:var(--muted);max-width:410px;margin-bottom:24px}.visual{min-height:300px;border:1px solid var(--line);border-radius:24px;padding:28px;background:linear-gradient(145deg,#13233cdd,#0b1528ee);box-shadow:0 20px 80px #0003;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}.visual::before{content:'';position:absolute;inset:0;background-image:radial-gradient(#4e6a8a33 1px,transparent 1px);background-size:22px 22px;pointer-events:none}.visual>*{position:relative}.code-icon{font:700 72px/1.4 ui-monospace,monospace;color:var(--cyan);text-align:center;letter-spacing:-8px}.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}.chip{display:inline-flex;align-items:center;justify-content:center;text-align:center;padding:8px 11px;border:1px solid #38516b;border-radius:30px;font-size:12px;background:#102035}.reveal{animation:enter .6s both}.awaiting{visibility:hidden}.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center}.node{padding:12px;background:#20314b;border:1px solid #476282;border-radius:12px;font-size:13px;text-align:center}.arrow{color:var(--cyan)}.consolidated{margin:24px auto 0;padding:15px 22px;border:1px solid var(--cyan);border-radius:12px;color:var(--cyan);text-align:center}.diagram{width:100%;height:auto;max-height:200px;overflow:visible}.diagram text{fill:var(--ink);font:14px system-ui}.diagram .moving{animation:travel 2.8s ease-in-out infinite alternate}.patch{display:grid;grid-template-columns:1fr 1fr;gap:16px}.patch-box{padding:16px 10px;background:#091323;border:1px solid var(--line);border-radius:12px;text-align:center}.patch-box code{display:block;font-size:12px;margin-top:12px;color:var(--muted)}.swatch{width:65px;height:65px;margin:16px auto 0;border-radius:50%;background:#fb923c;box-shadow:0 0 35px #fb923c22}.swatch.after{background:var(--cyan);box-shadow:0 0 35px #67e8f933}.annotation{color:var(--muted);font-size:12px;margin-top:18px;line-height:1.55}.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.stat{font-size:clamp(27px,3.4vw,46px);font-weight:750;letter-spacing:-.05em}.stat-grid>div{border-left:2px solid #546882;padding-left:16px}.stat-grid>div:last-child{border-color:var(--cyan);color:var(--cyan)}.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:20px}.actions .button{display:inline-flex;align-items:center;justify-content:center;text-align:center}.big-mark{font-size:90px;color:var(--cyan);line-height:1.2;text-align:center}.transport{position:sticky;bottom:0;z-index:5;background:#0a1222f5;border-top:1px solid var(--line);backdrop-filter:blur(12px);padding:16px max(24px,calc((100vw - 1096px)/2));}.toolbar{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap}.group{display:flex;align-items:center;gap:8px}.label-group{display:flex;gap:12px;flex:1;justify-content:flex-end;align-items:end}label{display:flex;flex-direction:column;gap:4px;color:var(--muted);font-size:11px}select{font-size:13px;padding:10px;max-width:230px;width:100%}#voiceLabel{flex:1;max-width:230px;min-width:100px}#page{font-variant-numeric:tabular-nums;white-space:nowrap;font-size:13px;min-width:46px;text-align:center}#language{white-space:nowrap}[hidden]{display:none!important}body:not(.playing) .reveal,body:not(.playing) .moving{animation-play-state:paused}@keyframes enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@keyframes travel{from{transform:translateX(0)}to{transform:translateX(180px)}}
 @media(max-width:740px){header{padding:16px 20px}.tagline{max-width:150px;text-align:right}main{padding:6px 20px 24px}.scene{grid-template-columns:1fr;gap:20px;min-height:0}h1{font-size:40px;margin:10px 0 12px}.subtitle{font-size:16px;margin:0}.visual{min-height:220px;padding:20px}.code-icon{font-size:56px}.big-mark{font-size:65px}.transport{padding:12px 16px;position:sticky}.toolbar{gap:10px}.label-group{flex-basis:100%;justify-content:space-between}.patch-box code{font-size:11px}#chapterNav{margin-bottom:18px}.annotation{font-size:11px}.stat{font-size:35px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 /* Keep the persistent controls outside the scrolling lesson, including short phones. */
@@ -89,9 +89,9 @@ header{padding-top:12px;padding-bottom:12px}
 #settingsToggle[aria-expanded=true]{color:var(--cyan);border-color:var(--cyan)}
 @media(max-width:1000px){
 .toolbar{flex-wrap:nowrap;justify-content:space-between;gap:8px}.toolbar .group{width:auto;flex:none}
-#settingsPanel{position:absolute;right:max(8px,env(safe-area-inset-right));bottom:calc(100% + 8px);z-index:10;width:min(300px,calc(100vw - 16px));max-height:calc(100dvh - 85px);overflow:auto;padding:16px;display:flex;flex-direction:column;align-items:stretch;gap:14px;background:#111e32;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 40px #0008}
-#settingsPanel label{width:100%;max-width:none;flex:none;font-size:12px}#settingsPanel label>span{position:static;width:auto;height:auto;overflow:visible;clip-path:none}
-#settingsPanel select{max-width:none;padding:10px}#settingsPanel #language{align-self:flex-start}
+#settingsPanel{position:absolute;right:max(8px,env(safe-area-inset-right));bottom:calc(100% + 8px);z-index:10;width:min(300px,calc(100vw - 16px));max-height:calc(100dvh - 85px);overflow:auto;padding:16px;display:grid;grid-template-columns:auto 1fr;align-items:stretch;gap:14px;background:#111e32;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 40px #0008}
+#settingsPanel label{grid-column:1 / -1;width:100%;max-width:none;flex:none;font-size:12px}#settingsPanel label>span{position:static;width:auto;height:auto;overflow:visible;clip-path:none}
+#settingsPanel select{max-width:none;padding:10px}#settingsPanel #language{justify-self:start;align-self:start}
 }
 @media(max-width:380px){#play .play-word{display:none}#play{width:44px;padding:10px 4px}}
 /* Keep the transport height stable across responsive breakpoints. */
@@ -152,8 +152,8 @@ header{padding-top:12px;padding-bottom:12px}
     "id": "Biarkan Pengetahuan Berbicara Sendiri."
   },
   "welcome": {
-    "en": "A self-presenting HTML lesson · about 90 seconds",
-    "id": "Pelajaran HTML yang mempresentasikan diri · sekitar 90 detik"
+    "en": "A self-presenting HTML lesson - about 3 minutes",
+    "id": "Pelajaran HTML yang membawakan dirinya sendiri - sekitar 3 menit"
   },
   "download": "downloads/novatelle-skill.zip",
   "repositoryUrl": "https://github.com/luisanthoniealkins/Novatelle",
@@ -170,32 +170,32 @@ header{padding-top:12px;padding-bottom:12px}
       },
       "labels": {
         "en": [
-          "No recorded voice",
+          "No recorded narration",
           "No prerecorded video",
           "No human presenter"
         ],
         "id": [
-          "Tanpa rekaman suara",
+          "Tanpa rekaman narasi",
           "Tanpa rekaman video",
           "Tanpa presenter manusia"
         ]
       },
       "segments": [
         {
-          "en": "Hello. I’m Novatelle, an HTML file with something to say.",
-          "id": "Halo. Saya Novatelle, berkas HTML yang bisa bercerita."
+          "en": "Hi! I'm Novatelle. I'm an HTML file, and I can present myself.",
+          "id": "Hai! Saya Novatelle. Saya berkas HTML, dan saya bisa membawakan presentasi sendiri."
         },
         {
-          "en": "No recorded voice.",
-          "id": "Tanpa rekaman suara."
+          "en": "No recorded narration.",
+          "id": "Tanpa rekaman narasi."
         },
         {
           "en": "No prerecorded video.",
           "id": "Tanpa rekaman video."
         },
         {
-          "en": "No human presenter either. Your browser supplies the voice; my code brings the ideas into view.",
-          "id": "Tanpa presenter manusia juga. Peramban Anda menyediakan suara; kode saya menampilkan gagasannya."
+          "en": "And no human presenter, either. Your browser gives me a voice, while my code controls what you see, when you see it, and what happens next.",
+          "id": "Dan tanpa presenter manusia juga. Peramban memberi saya suara, sementara kode saya mengatur apa yang Anda lihat, kapan tampilannya muncul, dan apa yang terjadi selanjutnya."
         }
       ],
       "note": {
@@ -206,7 +206,7 @@ header{padding-top:12px;padding-bottom:12px}
     {
       "kind": "workflow",
       "title": {
-        "en": "A small change. A long detour.",
+        "en": "A Small Change. A Long Detour.",
         "id": "Perubahan kecil. Proses panjang."
       },
       "subtitle": {
@@ -231,12 +231,12 @@ header{padding-top:12px;padding-bottom:12px}
       },
       "segments": [
         {
-          "en": "Slides, recording, video editing, revisions. One tiny correction can send you around the loop again.",
-          "id": "Salindia, perekaman, penyuntingan video, revisi. Satu koreksi kecil bisa membuat Anda mengulang prosesnya."
+          "en": "Think about creating a training video. You prepare slides, record your explanation, edit everything together... and then notice one tiny mistake. Suddenly, you're back to editing.",
+          "id": "Bayangkan membuat video pelatihan. Anda menyiapkan salindia, merekam penjelasan, menyunting semuanya... lalu menemukan satu kesalahan kecil. Tiba-tiba, Anda harus menyunting lagi."
         },
         {
-          "en": "Generated images and video can make precise visual fixes awkward. Here, the presentation lives in code. Change a part, then check it.",
-          "id": "Pada gambar dan video generatif, perbaikan visual yang presisi bisa merepotkan. Di sini, presentasi berupa kode. Ubah bagiannya, lalu periksa."
+          "en": "AI-generated images can look amazing, but precise corrections can be frustrating. Change one arrow, and you might need to regenerate the entire image. I'm different. Change that specific part in my code, and leave everything else alone.",
+          "id": "Gambar buatan AI bisa terlihat menakjubkan, tetapi koreksi yang presisi bisa membuat frustrasi. Mengubah satu panah saja mungkin mengharuskan Anda membuat ulang seluruh gambar. Saya berbeda. Ubah bagian itu saja dalam kode saya, dan biarkan bagian lainnya tetap sama."
         }
       ],
       "note": {
@@ -247,12 +247,12 @@ header{padding-top:12px;padding-bottom:12px}
     {
       "kind": "motion",
       "title": {
-        "en": "Yes, these controls are real.",
-        "id": "Ya, kontrolnya benar-benar berfungsi."
+        "en": "Go Ahead. Try Me.",
+        "id": "Silakan. Coba Saya."
       },
       "subtitle": {
-        "en": "A presentation you can interrupt. Politely.",
-        "id": "Presentasi yang boleh Anda sela. Dengan sopan."
+        "en": "Click, explore, and take control.",
+        "id": "Klik, jelajahi, dan ambil kendali."
       },
       "labels": {
         "en": [
@@ -270,12 +270,12 @@ header{padding-top:12px;padding-bottom:12px}
       },
       "segments": [
         {
-          "en": "Watch these shapes connect and move. Hover over the circle or rectangle, then click or tap to change its color. Give both a try.",
-          "id": "Lihat bentuk-bentuk ini terhubung dan bergerak. Arahkan kursor ke lingkaran atau persegi panjang, lalu klik atau ketuk untuk mengubah warnanya. Coba keduanya."
+          "en": "As I speak, these shapes appear, connect, and move alongside my explanation. But don't just watch! Hover over the circle or rectangle, then click or tap each one to change its color.",
+          "id": "Saat saya berbicara, bentuk-bentuk ini muncul, terhubung, dan bergerak mengikuti penjelasan. Tapi jangan hanya menonton! Arahkan kursor ke lingkaran atau persegi panjang, lalu klik atau ketuk masing-masing untuk mengubah warnanya."
         },
         {
-          "en": "Pause me while you experiment. The controls below also let you skip chapters, change speed, or switch to Indonesian. Click either shape again to switch back.",
-          "id": "Jeda narasi saat Anda mencoba. Kontrol di bawah juga bisa dipakai untuk pindah bab, mengubah kecepatan, atau mengganti bahasa. Klik bentuknya lagi untuk mengembalikan warna."
+          "en": "Go ahead! Pause me if you need more time. You can also navigate between chapters, choose my voice, adjust my speed, or even switch to Indonesian. You're not just watching me. You're in control.",
+          "id": "Silakan coba! Jeda saya jika Anda perlu waktu lebih. Anda juga bisa berpindah bab, memilih suara, mengatur kecepatan, atau beralih ke bahasa Inggris. Anda bukan sekadar menonton. Anda yang memegang kendali."
         }
       ],
       "note": {
@@ -286,8 +286,8 @@ header{padding-top:12px;padding-bottom:12px}
     {
       "kind": "edit",
       "title": {
-        "en": "Small patch. Clear difference.",
-        "id": "Edit kecil. Bedanya jelas."
+        "en": "Edit the Part. Not the Whole.",
+        "id": "Edit Bagiannya. Bukan Semuanya."
       },
       "subtitle": {
         "en": "Editable. Reviewable. Yours.",
@@ -309,12 +309,12 @@ header{padding-top:12px;padding-bottom:12px}
       },
       "segments": [
         {
-          "en": "Ask a coding agent: make this node cyan. This is a scripted illustration, not a live AI call.",
-          "id": "Minta agen pemrograman: ubah simpul ini menjadi sian. Ini ilustrasi terprogram, bukan panggilan AI langsung."
+          "en": "Imagine this diagram is almost perfect, except for one little detail. Just tell your coding agent, \"Make this node cyan.\" What you're seeing is a scripted example, not a live AI call.",
+          "id": "Bayangkan diagram ini hampir sempurna, kecuali satu detail kecil. Cukup minta agen pemrograman Anda, \"Ubah simpul ini menjadi sian.\" Yang Anda lihat adalah contoh terprogram, bukan panggilan AI langsung."
         },
         {
-          "en": "A small source edit changes one visual. The rest can stay put. Review the difference, test playback, and refine it. Editable does not mean automatically correct.",
-          "id": "Edit kecil pada kode mengubah satu visual. Bagian lain bisa tetap sama. Tinjau perbedaannya, uji pemutaran, lalu sempurnakan. Bisa diedit bukan berarti otomatis benar."
+          "en": "In a real workflow, the agent can modify my source code, show exactly what changed, and replay the affected scene. Of course, AI doesn't guarantee perfection. But correcting that final ten percent becomes a small, reviewable change, instead of starting all over again.",
+          "id": "Dalam alur kerja nyata, agen bisa mengubah kode sumber saya, menunjukkan bagian yang berubah, dan memutar ulang adegan terkait. Tentu saja, AI tidak menjamin kesempurnaan. Namun, menyempurnakan sepuluh persen terakhir menjadi perubahan kecil yang bisa ditinjau, tanpa harus memulai dari awal."
         }
       ],
       "note": {
@@ -325,7 +325,7 @@ header{padding-top:12px;padding-bottom:12px}
     {
       "kind": "size",
       "title": {
-        "en": "A file. Not a film.",
+        "en": "A File. Not a Film.",
         "id": "Berkas. Bukan film."
       },
       "subtitle": {
@@ -335,25 +335,25 @@ header{padding-top:12px;padding-bottom:12px}
       "labels": {
         "en": [
           "~600 MB",
-          "~44 KB",
+          "~46 KB",
           "10-minute screen recording",
           "This HTML presentation"
         ],
         "id": [
           "~600 MB",
-          "~44 KB",
+          "~46 KB",
           "Rekaman layar 10 menit",
           "Presentasi HTML ini"
         ]
       },
       "segments": [
         {
-          "en": "One example: a ten-minute Windows Snipping Tool recording at default settings was about six hundred megabytes.",
-          "id": "Satu contoh: rekaman Windows Snipping Tool selama sepuluh menit dengan pengaturan bawaan berukuran sekitar enam ratus megabita."
+          "en": "Here's something interesting. A ten-minute screen recording my creator made with Windows Snipping Tool, using default settings, took around six hundred megabytes.",
+          "id": "Ada hal menarik. Rekaman layar sepuluh menit yang dibuat pencipta saya dengan Windows Snipping Tool, memakai pengaturan bawaan, berukuran sekitar enam ratus megabita."
         },
         {
-          "en": "This HTML presentation is about forty-four kilobytes. Different artifacts, not a controlled benchmark. Browser and voice resources are extra.",
-          "id": "Presentasi HTML ini sekitar empat puluh empat kilobita. Hasilnya berbeda, bukan uji banding terkontrol. Sumber daya peramban dan suara dihitung terpisah."
+          "en": "This shorter HTML demo? Roughly forty-six kilobytes. It's not a like-for-like comparison, and my browser still provides speech and rendering. But here's the idea: why store thousands of video frames when code can create the visuals as you watch?",
+          "id": "Demo HTML yang lebih singkat ini? Sekitar empat puluh enam kilobita. Ini bukan perbandingan yang setara, dan peramban tetap menyediakan suara serta tampilan. Namun, inilah idenya: mengapa menyimpan ribuan bingkai video jika kode bisa membuat visual saat Anda menontonnya?"
         }
       ],
       "note": {
@@ -364,7 +364,7 @@ header{padding-top:12px;padding-bottom:12px}
     {
       "kind": "outro",
       "title": {
-        "en": "Let knowledge speak for itself.",
+        "en": "Let Knowledge Speak for Itself.",
         "id": "Biarkan pengetahuan berbicara sendiri."
       },
       "subtitle": {
@@ -385,12 +385,12 @@ header{padding-top:12px;padding-bottom:12px}
       },
       "segments": [
         {
-          "en": "Make your own. Download the Novatelle skill, give your coding agent a topic, and inspect the source.",
-          "id": "Buat versi Anda. Unduh skill Novatelle, beri agen pemrograman Anda sebuah topik, dan lihat kode sumbernya."
+          "en": "Now, imagine training materials that explain themselves. A new employee could learn a workflow, a developer could understand an architecture, and when something changes, you simply ask your coding agent to update the lesson. No need to record everything again.",
+          "id": "Sekarang, bayangkan materi pelatihan yang menjelaskan dirinya sendiri. Karyawan baru bisa mempelajari alur kerja, pengembang bisa memahami arsitektur, dan ketika ada perubahan, Anda cukup meminta agen pemrograman memperbarui pelajaran. Tidak perlu merekam semuanya lagi."
         },
         {
-          "en": "Create, play, refine. Let knowledge speak for itself.",
-          "id": "Buat, putar, sempurnakan. Biarkan pengetahuan berbicara sendiri."
+          "en": "That's the idea behind Novatelle. Download my Codex skill, give your AI a topic, and make me teach something new. Create, play, refine. Let knowledge speak for itself. Thank you for watching!",
+          "id": "Itulah gagasan di balik Novatelle. Unduh skill Codex saya, beri AI Anda sebuah topik, dan ajak saya mengajarkan hal baru. Buat, putar, sempurnakan. Biarkan pengetahuan berbicara sendiri. Terima kasih sudah menonton!"
         }
       ],
       "note": {

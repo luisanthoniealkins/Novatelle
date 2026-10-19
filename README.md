@@ -2,7 +2,7 @@
 
 **Let Knowledge Speak for Itself.**
 
-An HTML lesson that presents itself: browser narration, animated SVG, bilingual chapters, and a player you can interrupt. The demo, **This Is Not a Video.**, tells its own story in six scenes over roughly 90 seconds. A dark canvas, cyan diagrams, visible captions, and a persistent playback footer keep the ideas in view.
+An HTML lesson that presents itself: browser narration, animated SVG, bilingual chapters, and a player you can interrupt. The demo, **This Is Not a Video.**, tells its own story in six scenes over roughly 3 minutes. A dark canvas, cyan diagrams, visible captions, and a persistent playback footer keep the ideas in view.
 
 [Open the demo](https://luisanthoniealkins.github.io/Novatelle/) · [Download the Codex skill](downloads/novatelle-skill.zip) · [Read the skill](.agents/skills/novatelle/SKILL.md)
 
@@ -16,7 +16,7 @@ One standalone HTML file contains the lesson, animated SVG visuals, and playback
 
 Voices and pause/resume behavior depend on your browser and operating system. On Android, Resume repeats the current narration segment to avoid native speech-resume failures. Some voices need an internet connection. If narration is unavailable, the lesson continues with paced captions.
 
-The presentation is **44,015 bytes (44.0 KB)**, rounded to **44 KB** in the demo. This excludes browser and voice resources. Its comparison with a roughly **600 MB**, ten-minute Windows Snipping Tool recording is an illustrative observation, not an equivalent-content benchmark.
+The presentation is **46,040 bytes (46.0 KB)**, rounded to **46 KB** in the demo. This excludes browser and voice resources. Its comparison with a roughly **600 MB**, ten-minute Windows Snipping Tool recording is an illustrative observation, not an equivalent-content benchmark.
 
 ## Install the reusable skill
 
