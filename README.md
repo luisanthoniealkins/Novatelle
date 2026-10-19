@@ -14,9 +14,9 @@ Open the demo above or open `index.html` locally, then press **Play**. Use **EN/
 
 One standalone HTML file contains the lesson, animated SVG visuals, and playback controls. Your browser narrates the text while visual cues follow each segment. There is no build step, API key, or bundled audio or video. The layout adapts to desktop and phone screens.
 
-Voices and pause/resume behavior depend on your browser and operating system. Some voices need an internet connection. If narration is unavailable, the lesson continues with paced captions.
+Voices and pause/resume behavior depend on your browser and operating system. On Android, Resume repeats the current narration segment to avoid native speech-resume failures. Some voices need an internet connection. If narration is unavailable, the lesson continues with paced captions.
 
-The presentation is **42,823 bytes (42.8 KB)**, rounded to **43 KB** in the demo. This excludes browser and voice resources. Its comparison with a roughly **600 MB**, ten-minute Windows Snipping Tool recording is an illustrative observation, not an equivalent-content benchmark.
+The presentation is **43,037 bytes (43.0 KB)**, rounded to **43 KB** in the demo. This excludes browser and voice resources. Its comparison with a roughly **600 MB**, ten-minute Windows Snipping Tool recording is an illustrative observation, not an equivalent-content benchmark.
 
 ## Install the reusable skill
 
